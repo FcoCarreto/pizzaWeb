@@ -1,3 +1,6 @@
+<?php
+include("conexion.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -107,7 +110,20 @@ $referencias=$_POST['txtReferencias'];
 	echo "<h2>Dato Guardado</h2>";
 		}
 ?>
+<?php
+if(isset($_POST['buscar']))
+{
+$nombre = $_POST["nombre"];
+$query = mysqli_query($conexion,"SELECT * FROM cliente WHERE nombre = '$nombre'");
+$comprobacion = mysqli_num_rows($query);
 
+if($comprobacion == 1){
+echo "<h2>Este Usuario ya EXISTE</h2>";
+}else if ($comprobacion == 0){
+echo "<h2>Usuario Disponible</h2>";
+}
+}
+?>
 
 
 </body>
