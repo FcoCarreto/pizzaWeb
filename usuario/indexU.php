@@ -44,10 +44,11 @@ while ($registro=mysqli_fetch_array($consulta)) {
 </div>
 </div>
 <style type="text/css" href="estilosUsuarios.css">
-	@charset "utf-8"
+	@charset "utf-8";
+/* CSS Document */
 .nav{
-width: 185%;
-height: 400px;
+width: 185%;/*tamaño de la tabla general*/
+height: 400px;/*aumentar tamaño de abajo*/
 margin-right: 220%;
 margin-left: 0%;
 border-radius: 20px;
